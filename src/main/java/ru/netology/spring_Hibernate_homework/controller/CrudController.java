@@ -21,22 +21,22 @@ public class CrudController {
         this.repository = repository;
     }
 
-    @GetMapping("/by-city")
-    public List<Person> getPersonByCity(@RequestParam("city") String city) {
-        List<Person> result = repository.findByCityOfLiving(city);
-        return result;
-    }
-
-    @GetMapping("/by-age")
-    public List<Person> getPersonByAge(@RequestParam("age") int age) {
-        List<Person> result = repository.findByAgeLessThan(age);
-        return result;
-    }
-
-    @GetMapping("/by-name-and-surname")
-    public Optional<List<Person>> getPersonByNameAndSurname(@RequestParam("name") String name,
-                                                            @RequestParam("surname") String surname) {
-        Optional<List<Person>> result = repository.findByNameSurname(name, surname);
-        return result;
-    }
+//    @GetMapping("/by-city")
+//    public List<Person> getPersonByCity(@RequestParam("city") String city) {
+//        List<Person> result = repository.findByCityOfLiving(city);
+//        return result;
+//    }
+//
+//    @GetMapping("/by-age")
+//    public List<Person> getPersonByAge(@RequestParam("age") int age) {
+//        List<Person> result = repository.findByAgeLessThan(age);
+//        return result;
+//    }
+//
+//    @GetMapping("/by-name-and-surname")
+//    public Optional<List<Person>> getPersonByNameAndSurname(@RequestParam("name") String name,
+//                                                            @RequestParam("surname") String surname) {
+//        Optional<List<Person>> result = repository.findByNameSurname(name, surname);
+//        return result;
+//    }
 }

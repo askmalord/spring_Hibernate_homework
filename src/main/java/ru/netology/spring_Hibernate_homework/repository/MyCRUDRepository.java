@@ -21,4 +21,7 @@ public interface MyCRUDRepository extends CrudRepository<Person, PersonPrimaryKe
     @Query("Select p FROM Person p WHERE p.nameSurnameAge.name = :name AND p.nameSurnameAge.surname = :surname")
     Optional<List<Person>> findByNameSurname(@Param("name") String name,
                                              @Param("surname") String surname);
+
+    @Query("Select p FROM Person p WHERE p.nameSurnameAge.name = :name")
+    List<Person> findByName(@Param("name") String name);
 }
